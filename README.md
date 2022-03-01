@@ -23,3 +23,16 @@ jQuery v3.3.1 | (c) JS Foundation and other contributors | jquery.org/license
 jQuery-qrcode v0.14.0 - https://larsjung.de/jquery-qrcode/ 
 
 jsSHA (c) Brian Turek 2008-2017 http://caligatio.github.com/jsSHA/
+
+## Docker Infos
+Clone Git Repo
+
+Create Dockerfile
+
+    FROM nginx
+    
+    COPY . /usr/share/nginx/html
+
+docker build -t imagename .
+
+docker run --name containername -p 80:80 imagename
