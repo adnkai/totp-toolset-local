@@ -36,3 +36,22 @@ Create Dockerfile
 docker build -t imagename .
 
 docker run --name containername -p 80:80 imagename
+
+## Azure
+
+Container Registry anzeigen
+    az account show // ggf. Account wechseln
+    az acr list -o table
+    az acr login -n registryname
+
+Docker image taggen (container registry)
+    docker tag local_imagename mycontainerregistry.azurecr.io/newimagename:tag
+
+Docker image hochladen (docker push)
+    docker push mycontainerregistry.azurecr.io/newimagename:tag
+
+Registry Admin User aktivieren
+    Access Keys
+
+Container instanz starten
+    Rechtsklick auf Repository/Versionsnummer
